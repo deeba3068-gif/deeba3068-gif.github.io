@@ -111,3 +111,187 @@ footer{max-width:var(--max);margin:auto;padding:25px 24px 35px;display:flex;just
         height: 350px;
     }
 }
+/* =========================================
+   EDUCATION SECTION
+   ========================================= */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-card {
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    background .35s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215,255,95,.25);
+  background: var(--surface2);
+}
+
+.education-card:nth-child(even) {
+  background: var(--surface2);
+}
+
+.education-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: #8f9196;
+  margin-bottom: 22px;
+}
+
+.education-card h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.education-focus {
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.education-school {
+  color: #b0b1b5;
+  font-size: 14px;
+}
+
+.education-school span {
+  color: #777980;
+}
+
+.education-score {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: #9fa1a6;
+  font-size: 11px;
+}
+
+.education-score strong {
+  color: var(--text);
+  margin-left: 5px;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS SECTION
+   ========================================= */
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 70px;
+}
+
+.achievement-card {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 25px;
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  min-height: 210px;
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    background .35s ease;
+}
+
+.achievement-card:nth-child(even) {
+  background: var(--surface2);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(215,255,95,.25);
+  background: #15171b;
+}
+
+.achievement-number {
+  font: 800 42px Manrope;
+  letter-spacing: -.05em;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.achievement-content h3 {
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+
+.achievement-content p {
+  color: #9fa1a6;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media(max-width:850px) {
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+
+  .achievement-card {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .education-card h3 {
+    font-size: 26px;
+  }
+
+}
+
+
+@media(max-width:520px) {
+
+  .education-meta {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .education-card {
+    padding: 25px;
+  }
+
+  .education-card h3 {
+    font-size: 23px;
+  }
+
+  .achievement-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .achievement-number {
+    font-size: 38px;
+  }
+
+  .achievement-content h3 {
+    font-size: 21px;
+  }
+
+}
